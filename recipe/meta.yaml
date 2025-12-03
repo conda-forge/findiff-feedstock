@@ -1,5 +1,5 @@
 {% set name = "findiff" %}
-{% set version = "0.12.1" %}
+{% set version = "0.12.2" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: f5bad8f52a5f21f55903c0c9fa2bd243fbbd78fe8143d3e0b5a41abf4dbae54c
+  sha256: ccfbcd5ac8efce496ff9e789018db1f385c53489b42ef8f4eda14487cd8cdea4
 
 build:
   number: 0
