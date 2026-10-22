@@ -1,13 +1,13 @@
 {% set name = "findiff" %}
-{% set version = "0.14.0" %}
+{% set version = "0.16.0" %}
 
 package:
   name: "{{ name|lower }}"
   version: "{{ version }}"
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 36ff0456e651a6d1277b316e7f20f58e72a8655df4e61c481af815e69b249200
+  url: "https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: a3e8c356143e34f26bbfd95918309c3cf8811c57b226751ed9e35508d9f74067
 
 build:
   number: 0
@@ -16,19 +16,21 @@ build:
 
 requirements:
   host:
-    - python >=3.6
-    - pip >=21.0.1
-    - pytest-runner >=5.3.0
+    - python {{ python_min }}
+    - pip
+    - setuptools >=64
+    - setuptools-scm >=6.2
   run:
-    - numpy >=1.14.2
-    - python >=3.6
-    - scipy >=1.3.1
-    - sympy >=1.8
+    - python >={{ python_min }}
+    - numpy
+    - scipy
+    - sympy
 
 test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
   imports:
     - findiff
