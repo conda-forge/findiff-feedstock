@@ -1,5 +1,5 @@
 {% set name = "findiff" %}
-{% set version = "0.16.0" %}
+{% set version = "0.16.1" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: a3e8c356143e34f26bbfd95918309c3cf8811c57b226751ed9e35508d9f74067
+  sha256: 0fa05d7c5f439d44f6fd54d7eba16def82254b01dc0a7161dd744170bfef1e25
 
 build:
   number: 0
